@@ -41,20 +41,20 @@ Es el repositorio de prácticas del curso de Claude Code. Tiene tests, algún bu
 
 Las rutas de carrito y pedidos necesitan la cabecera `Authorization: Bearer <token>`, con el token que devuelve el login. Los importes van en céntimos.
 
-| Método   | Ruta                         | Qué hace                                    |
-| -------- | ---------------------------- | ------------------------------------------- |
-| `POST`   | `/api/auth/login`            | Inicia sesión y devuelve un token           |
-| `GET`    | `/api/products`              | Lista el catálogo                           |
-| `GET`    | `/api/products/:id`          | Devuelve un producto                        |
-| `GET`    | `/api/cart`                  | Devuelve el carrito con sus totales         |
-| `POST`   | `/api/cart/items`            | Añade un producto (`productId`, `quantity`) |
-| `PATCH`  | `/api/cart/items/:productId` | Cambia la cantidad de un producto           |
-| `DELETE` | `/api/cart/items/:productId` | Quita un producto                           |
-| `POST`   | `/api/cart/coupon`           | Aplica un cupón (`code`)                    |
-| `DELETE` | `/api/cart/coupon`           | Quita el cupón                              |
-| `POST`   | `/api/orders`                | Crea un pedido con el contenido del carrito |
-| `GET`    | `/api/orders`                | Lista mis pedidos                           |
-| `GET`    | `/api/orders/:id`            | Devuelve un pedido                          |
+| Método   | Ruta                         | Qué hace                                                   |
+| -------- | ---------------------------- | ---------------------------------------------------------- |
+| `POST`   | `/api/auth/login`            | Inicia sesión y devuelve un token                          |
+| `GET`    | `/api/products`              | Lista el catálogo (`category`, `maxPriceCents` opcionales) |
+| `GET`    | `/api/products/:id`          | Devuelve un producto                                       |
+| `GET`    | `/api/cart`                  | Devuelve el carrito con sus totales                        |
+| `POST`   | `/api/cart/items`            | Añade un producto (`productId`, `quantity`)                |
+| `PATCH`  | `/api/cart/items/:productId` | Cambia la cantidad de un producto                          |
+| `DELETE` | `/api/cart/items/:productId` | Quita un producto                                          |
+| `POST`   | `/api/cart/coupon`           | Aplica un cupón (`code`)                                   |
+| `DELETE` | `/api/cart/coupon`           | Quita el cupón                                             |
+| `POST`   | `/api/orders`                | Crea un pedido con el contenido del carrito                |
+| `GET`    | `/api/orders`                | Lista mis pedidos                                          |
+| `GET`    | `/api/orders/:id`            | Devuelve un pedido                                         |
 
 Ejemplo desde Git Bash, con el servidor arrancado:
 
