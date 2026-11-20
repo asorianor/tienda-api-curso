@@ -1,9 +1,9 @@
 import type { Product } from '../db/schema.ts';
 import { AppError } from '../shared/errors.ts';
-import { findAllProducts, findProductById } from './repository.ts';
+import { findProductById, findProducts, type ProductFilters } from './repository.ts';
 
-export function listProducts(): Product[] {
-  return findAllProducts();
+export function listProducts(filters: ProductFilters = {}): Product[] {
+  return findProducts(filters);
 }
 
 export function getProduct(id: number): Product {
